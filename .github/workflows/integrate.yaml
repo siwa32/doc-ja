@@ -8,6 +8,7 @@ on:
     branches:
       - "master"
       - "doc-en/**"
+      - "fix/**"
 
 jobs:
   build:
