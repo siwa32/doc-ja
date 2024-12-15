@@ -60,7 +60,7 @@
        戻り値の型が、<type class="union"><type>string</type><type>false</type></type> から <type>string</type> に変更されました。
       </entry>
      </row>
-      <row>
+     <row>
       <entry>7.1.0</entry>
       <entry>
        <parameter>ip</parameter> の型が

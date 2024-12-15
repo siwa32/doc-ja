@@ -1950,57 +1950,11 @@ CURSOR</literal> ステートメント ID。</para>">
 しかし、Acrobat Distiller? あるいは Ghostview
 でドキュメントを pdf に変換すると表示されます。</para>'>
 
-<!-- Notes for safe-mode limited functions: -->
-
-<!-- Not used in EN anymore -->
-<!ENTITY note.sm.disabled '<note xmlns="http://docbook.org/ns/docbook"><simpara>&sm.disabled;</simpara></note>'>
-
-<!-- Not used in EN anymore -->
-<!ENTITY note.sm.uidcheck '<note xmlns="http://docbook.org/ns/docbook"><simpara><link linkend="features.safe-mode">
-セーフモード</link> が有効の場合、PHP は操作を行うファイル／ディレクトリが実行するスクリプトと
-同じ UID (所有者)を有しているかどうかを確認します。</simpara></note>'>
-
-<!-- Not used in EN anymore -->
-<!ENTITY note.sm.uidcheck.dir '<note xmlns="http://docbook.org/ns/docbook"><simpara> <link
-linkend="features.safe-mode">セーフモード</link> が有効の場合、PHP は、
-操作を行うディレクトリが、実行するスクリプトと同じ UID (所有者)を有しているか
-どうかを確認します。</simpara></note>'>
-
 <!ENTITY note.open-basedir.func '<note xmlns="http://docbook.org/ns/docbook"><para>この関数の動作は、<link
 linkend="ini.open-basedir">open_basedir</link> の設定に依存します。</para></note>'>
 
 <!ENTITY note.language-construct '<note xmlns="http://docbook.org/ns/docbook"><simpara>これは、関数ではなく
 言語構造のため、<link linkend="functions.variable-functions">可変関数</link> や <link linkend="functions.named-arguments">名前付き引数</link> を用いてコールすることはできません。</simpara></note>'>
-
-<!-- Common pieces in features/safe-mode.xml
-     Jade doesn't allow in-line entities, so I put them here... Though they
-     should have been inline in safe-mode.xml -->
-
-<!-- Not used in EN anymore -->
-<!ENTITY sm.uidcheck '処理を行うファイル/ディレクトリが実行するスクリプトと
-同じUIDを有しているかどうかを確認します。'>
-
-<!-- Not used in EN anymore -->
-<!ENTITY warn.sm.exec '<warning xmlns="http://docbook.org/ns/docbook"><simpara><link linkend="features.safe-mode">
-セーフモード</link>が有効な場合、コマンド文字列は
-<function>escapeshellcmd</function> でエスケープされます。
-つまり、<literal>echo y | echo x</literal> は、<literal>echo y \| echo x</literal>
-となります。</simpara></warning>'>
-
-<!-- Not used in EN anymore -->
-<!ENTITY note.exec-path '<note xmlns="http://docbook.org/ns/docbook"><simpara><link linkend="features.safe-mode">
-セーフモード</link> が有効な場合、<link linkend="ini.safe-mode-exec-dir">
-safe_mode_exec_dir</link>の中にある実行プログラムのみ実行可能です。
-実際的な理由により、現在、実行プログラムへのパスに <literal>..</literal>を
-含めることはできません。</simpara></note>'>
-
-<!-- Not used in EN anymore -->
-<!ENTITY sm.uidcheck.dir '処理を行うディレクトリが実行するスクリプトと同じ UID
-を有しているかどうかを確認します。'>
-
-<!-- Not used in EN anymore -->
-<!ENTITY sm.disabled 'この関数は、PHP が <link xmlns="http://docbook.org/ns/docbook"
-linkend="features.safe-mode">safe-mode</link> で動作している場合は無効となります。'>
 
 <!-- Common pieces in partintro-sections -->
 <!ENTITY no.config '<para xmlns="http://docbook.org/ns/docbook">設定ディレクティブは定義されていません。</para>'>
@@ -2042,9 +1996,6 @@ linkend="features.safe-mode">safe-mode</link> で動作している場合は無�
 PHP 組み込みでコンパイルされているか、実行時に動的にロードされている場合のみ
 使用可能です。
 </simpara>'>
-
-<!ENTITY note.extension.php5 '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-PHP 5 が必要です。</simpara></note>'>
 
 <!-- PDO entities -->
 <!ENTITY pdo.driver-constants '<simpara xmlns="http://docbook.org/ns/docbook">このドライバでは以下の定数が定義されて
@@ -2170,16 +2121,6 @@ PECL 拡張モジュールのインストール</link> という章にありま�
 
 <!ENTITY sqlsafemode '<link xmlns="http://docbook.org/ns/docbook" linkend="ini.sql.safe-mode">SQL セーフモード</link>'>
 
-<!-- APD Notes -->
-<!ENTITY apd.debug-level.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>debug_level</parameter></term><listitem>
-<para><literal>XXX_TRACE</literal> 定数の組み合わせによる整数値。</para>
-<para><constant>MEMORY_TRACE</constant> を用いることは推奨しません。
-これは非常に低速で、またあまり正確ではないようだからです。
-<constant>ASSIGNMENT_TRACE</constant> は、まだ実装されていません。</para>
-<para>すべての機能 (TIMING, FUNCTIONS, ARGS SUMMARY (strace -c のようなもの))
-のトレースを有効にするには、値 99 を指定します。</para>
-</listitem></varlistentry>'>
-
 <!-- BCMath Notes -->
 <!-- to be translated -->
 <!ENTITY bc.scale.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
@@ -2302,14 +2243,6 @@ SimpleXML では、ほとんどのメソッドに反復処理を追加するた�
 <!ENTITY database.fetch-null '<note xmlns="http://docbook.org/ns/docbook"><simpara>この関数は、
 NULL フィールドに PHPの &null; 値を設定します。</simpara></note>'>
 
-<!-- MSQL Notes -->
-<!-- The msql.*.description entities are used in the parameters refsect1 -->
-<!ENTITY msql.linkid.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>link_identifier</parameter></term><listitem><para>mSQL 接続。指定されない場合、<function>msql_connect</function> により直近にオープンされたリンクが指定されたと仮定されます。そのようなリンクがない場合、この関数は、<function>msql_connect</function>をコールした時と同様にリンクを確立し、使用します。</para></listitem></varlistentry>'>
-
-<!ENTITY msql.result.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>result</parameter></term><listitem><para>評価された結果 <type>リソース</type>。この結果は、<function>msql_query</function> のコールにより得られたものです。</para></listitem></varlistentry>'>
-
-<!ENTITY msql.field-offset.req.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>field_offset</parameter></term><listitem><para>数値フィールドオフセット。<parameter>field_offset</parameter> は、<literal>1</literal>から始まります。</para></listitem></varlistentry>'>
-
 <!-- MySQL Notes -->
 <!-- The mysql.*.description entities are used in the parameters refsect1 -->
 <!ENTITY mysql.linkid.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>link_identifier</parameter></term><listitem><para>MySQL 接続。指定されない場合、<function>mysql_connect</function> により直近にオープンされたリンクが指定されたと仮定されます。そのようなリンクがない場合、引数を指定せずに <function>mysql_connect</function> がコールした時と同様にリンクを確立します。リンクが見付からない、または、確立できない場合、<constant>E_WARNING</constant> レベルのエラーが生成されます。</para></listitem></varlistentry>'>
@@ -2367,32 +2300,6 @@ NULL フィールドに PHPの &null; 値を設定します。</simpara></note>'
 関連する除法は
 <link linkend="language.types.resource.self-destruct">リソースの開放</link>を参照ください。</para>'>
 
-<!-- Sybase Notes -->
-<!ENTITY sybase.ct.only '<note xmlns="http://docbook.org/ns/docbook"><simpara>この関数は、Sybase の CT
-ライブラリインターフェイスでのみ使用可能で、DB ライブラリでは使用できません。
-</simpara></note>'>
-
-<!ENTITY sybase.db.only '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-この関数は、Sybase の DB ライブラリインターフェイスを使用する場合のみ利用可能で、
-CT ライブラリでは利用できません。</simpara></note>'>
-
-<!ENTITY sybase.linkid.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>link_identifier</parameter></term><listitem><para>Sybase 接続。
-このリンク ID が指定されない場合、<function>sybase_connect</function> により
-オープンされた直近のリンクが指定されたと仮定されます。
-そのようなリンクが見つからない場合、<function>sybase_connect</function>
-が引数なしでコールされた時と同様にリンクが作成されます。接続が見付かたなかったり、確立できない場合、<constant>E_WARNING</constant> レベルのエラーを発行します。</para></listitem></varlistentry>'>
-
-<!-- CPDF Notes -->
-<!ENTITY cpdf.ul '<para xmlns="http://docbook.org/ns/docbook">オプションのパラメータ
-<parameter>mode</parameter> は単位長さを定義します。この値が <literal>0</literal>
-または値が省略された場合、このページで指定されたデフォルト値が使用されます。
-それ以外の場合、現在の単位を無視して
-ポストスクリプトのポイントで座標が計測されます。</para>'>
-
-<!ENTITY cpdf.mode.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>mode</parameter></term><listitem><para>オプションのパラメータ <parameter>mode</parameter>は単位長さを定義します。この値が <literal>0</literal> または値が省略された場合、このページで指定されたデフォルト値が使用されます。それ以外の場合、現在の単位を無視してポストスクリプトのポイントで座標が計測されます。</para></listitem></varlistentry>'>
-
-<!ENTITY cpdf.pdf-document.description '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>pdf_document</parameter></term><listitem><para><function>cpdf_open</function> が返す、ドキュメントのハンドル。</para></listitem></varlistentry>'>
-
 <!-- Xattr entities -->
 <!ENTITY xattr.namespace '<para xmlns="http://docbook.org/ns/docbook">拡張属性には二種類の異なる名前空間、つまり、ユーザーとルートがあります。
 ユーザー名前空間は、すべてのユーザーで利用可能ですが、ルート名前空間は、ルート権限を有するユーザーのみ利用可能です。
@@ -2403,9 +2310,6 @@ xattr はデフォルトでユーザー名前空間で処理を行いますが�
 <!ENTITY ipv6.brackets '<note xmlns="http://docbook.org/ns/docbook"><simpara>数値で IPv6 アドレスを指定するときは、
 (例 <literal>fe80::1</literal>) アドレスを角カッコでくくらなくてはなりません。たとえば、
 <literal>tcp://[fe80::1]:80</literal>.</simpara></note>'>
-
-<!ENTITY ipv6.php5 '<note xmlns="http://docbook.org/ns/docbook"><simpara>IPv6 サポートは <literal>PHP 5.0.0
-</literal> で追加されました。</simpara></note>'>
 
 <!-- Notes for tidy -->
 <!ENTITY tidy.object '<classname xmlns="http://docbook.org/ns/docbook">Tidy</classname> オブジェクト。'>
@@ -2483,23 +2387,10 @@ Apache 設定ファイルにパスの値を追加する際、例えば
 
 <!ENTITY listendand ' そして'>
 
-<!-- classkit and runkit entities -->
-<!ENTITY note.classkit.selfmanipulation '<note xmlns="http://docbook.org/ns/docbook"><simpara>この関数により現在実行中
-(もしくはチェーンド)のメソッドを操作することはできません。</simpara>
-</note>'>
-
+<!-- runkit entities -->
 <!ENTITY note.runkit.selfmanipulation '<note xmlns="http://docbook.org/ns/docbook"><simpara>この関数は、
 現在実行中(もしくはチェーンド)のメソッドを操作することはできません。</simpara>
 </note>'>
-
-<!ENTITY note.runkit.sandbox '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-サンドボックスのサポート
-(<function>runkit_lint</function>, <function>runkit_lint_file</function>,
-および <classname>Runkit_Sandbox</classname> クラスで使用)は、
-PHP 5.1.0 以降または特別なパッチを適用した
-PHP 5.0 でのみ利用可能であり、スレッドセーフを有効にしておく必要があります。
-詳細については、runkit パッケージに含まれる <filename>README</filename>
-ファイルを参照してください。</simpara></note>'>
 
 <!ENTITY note.runkit.internal-override '<note xmlns="http://docbook.org/ns/docbook"><simpara>デフォルトでは、
 削除・リネーム・変更が可能なのはユーザー定義関数だけです。組み込み関数を
@@ -2663,14 +2554,6 @@ PHP 5.0 でのみ利用可能であり、スレッドセーフを有効にして
 </para>
 </note>
 '>
-<!ENTITY com.use-oo-instead '<note xmlns="http://docbook.org/ns/docbook">
- <simpara>
-  この関数は PHP 5 には存在しません。
-  より自然なオブジェクト指向形式の構文で、
-  プロパティにアクセスしたりメソッドをコールしたりすることになります。
- </simpara>
-</note>
-'>
 
 <!-- phar -->
 <!ENTITY phar.write '<note xmlns="http://docbook.org/ns/docbook"><para>
@@ -2678,18 +2561,6 @@ PHP 5.0 でのみ利用可能であり、スレッドセーフを有効にして
 が <literal>0</literal> でないと <classname>Phar</classname>
 オブジェクトで動作しません。それ以外の場合は
 <classname>PharException</classname> がスローされます。</para></note>'>
-
-<!ENTITY phar.removed.pharcompress '<note xmlns="http://docbook.org/ns/docbook"><para>
-このメソッドは、phar 拡張モジュールバージョン 2.0.0 で削除されました。
-今後は <function>Phar::compress</function>、
-<function>Phar::decompress</function>、<function>Phar::compressFiles</function> および
-<function>Phar::decompressFiles</function> をご利用ください。</para></note>'>
-
-<!ENTITY phar.removed.pharfileinfocompress '<note xmlns="http://docbook.org/ns/docbook"><para>
-このメソッドは、phar 拡張モジュールバージョン 2.0.0 で削除されました。
-今後は <function>PharFileInfo::isCompressed</function>、
-<function>PharFileInfo::decompress</function> および <function>PharFileInfo::compress</function>
-をご利用ください。</para></note>'>
 
 <!ENTITY phar.note.performance '<note xmlns="http://docbook.org/ns/docbook">
  <simpara>
@@ -2781,7 +2652,15 @@ PHP 7.4 以降では <option role="configure">--with-libxml</option>、それよ
 <!ENTITY spl.datastructures.intro.title '<title xmlns="http://docbook.org/ns/docbook">データ構造</title>'>
 
 <!ENTITY spl.exceptions.intro.title '<title xmlns="http://docbook.org/ns/docbook">例外</title>'>
-<!ENTITY spl.exceptions.intro '<para xmlns="http://docbook.org/ns/docbook">SPL には標準の例外が用意されています。</para><para xmlns="http://docbook.org/ns/docbook"><xref linkend="reserved.exceptions" /> も参照ください。</para>'>
+
+<!ENTITY spl.exceptions.intro '
+ <para xmlns="http://docbook.org/ns/docbook">
+  SPL には標準の例外が用意されています。
+ </para>
+ <para xmlns="http://docbook.org/ns/docbook">
+  <xref linkend="reserved.exceptions" /> も参照ください。
+ </para>
+'>
 
 <!ENTITY spl.files.intro.title '<title xmlns="http://docbook.org/ns/docbook">ファイル操作</title>'>
 <!ENTITY spl.files.intro '<partintro xmlns="http://docbook.org/ns/docbook"><para xmlns="http://docbook.org/ns/docbook">SPL にはファイルを扱うためのクラスが用意されています。</para></partintro>'>
